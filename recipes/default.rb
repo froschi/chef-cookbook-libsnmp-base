@@ -2,6 +2,10 @@ packages = Array.new
 
 case node[:lsb][:codename]
 when "lucid"
+  include_recipe "gawk"
+  include_recipe "make"
+  include_recipe "wget"
+
   packages |= %w/
     libsnmp-base
   /
